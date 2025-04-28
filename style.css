@@ -1,0 +1,313 @@
+/* UI + UX isn't the best, plan to fix it later™.
+ I don't know how i made this, but it works-ish so i guess its fine.
+ But i do have to say, i am NOT proud of this.
+ I have to make it better, but i don't know how.
+ And i have to fix the login form, add sign in and lot of other things, but i don't know how :D.
+
+ There are a lot of things that need to be done/finished thats why I will try to make it functional at first and then
+ i will try to make it look good and ofc i will try to make it responsive (famous last words). */
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    letter-spacing: normal;
+}
+
+:root {
+        --nav0: #03375e;                    /* Colors for main style */
+        --nav1: #2c70a3;                    /* Colors for main style */
+        --nav2: #2c93d5;                    /* Colors for main style */
+        --nav3: #00d4ff;                    /* Colors for main style */ 
+        --text: #f0e8e8;                    /* Colors for text*/
+        --text2: #ece3e3;                   /* Colors for text*/
+        --placeholder: #000000;             /* Color for placeholder */
+        --back_placeholder: #efe7e7e0;      /* Color for background of placeholder */
+        --background: #f0e8e8;              /* Color for background */
+}
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --background: #141313;          /* same as :root, but in dark mode soon™ */
+            --text2: #151414;
+            --text: #060606;
+        }           
+
+    body {
+        background-color: var(--background);
+    }
+
+}
+
+    .nav_bar {                                /* Navigation bar */
+        width: 100%;
+        height: auto;
+        background-color: var(--nav1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 5;
+}
+
+    .about {                                  /* About section */
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: none;
+        max-width: none;
+        width: 75%;
+        height: 75%;
+        padding: 10px;
+        border-radius: 10px;
+        flex-direction: column;
+}
+
+    .about .text {                            /* About, but now text */
+        padding: 5px;
+        font-size: 125%;
+        font-weight: 500;
+        color: var(--text);
+        background-color: var(--nav1);
+}
+
+    .links {                                  /* Links to white with underline */
+        color: var(--text);
+        cursor: alias;
+}
+
+    .search_bar_input::placeholder {          /* Now section where i don't know how i even made from here */
+        color: var(--placeholder);
+        text-align: center;
+}
+
+    #menu_toggle {
+        display: none;
+}
+
+    #menu_toggle:checked + .menu_icon + .dropdown_menu {
+        display: block;
+}
+
+    .dropdown_menu a:hover {
+        background-color: var(--nav2);
+}
+
+    .dropdown_menu {
+        display: none;
+        position: absolute;
+        scroll-snap-align: start;
+        top: 100%;
+        left: 0; 
+        background-color: var(--nav1);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+    .dropdown_menu a {
+        color: var(--text);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        margin-left: 0;                       /* to here */
+}
+
+    .search_bar .search_bar_input {
+        background-color: var(--back_placeholder);
+        width: 100%;
+        border-radius: 10px;
+}
+
+    .faq {                                   /* FAQ section */
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: none;
+        max-width: none;
+        flex-direction: column;
+        color: var(--text);
+}
+
+    .faq h1 {                                /* FAQ title */
+        text-align: center;
+        background-color: var(--nav1);
+        padding: 10px;
+        border-radius: 10px;
+        color: var(--text);
+        margin-top: 0;
+        margin-bottom: 30px;
+}
+   
+    .faq details {                          /* FAQ details aka answer */
+        margin-bottom: 10px;
+        border-radius: 2.5px;
+}
+
+    .faq summary {                          /* FAQ summary aka question */
+        cursor: pointer;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: var(--nav1);
+}
+    
+    .faq summary:hover {                    /* self explainable ngl */
+        color: var(--nav0);
+}       
+
+    .faq details[open] {                    /* FAQ style details when open */ 
+        border: 1px solid var(--nav1);
+        background-color: var(--nav2);
+        border-radius: 10px;
+}
+        
+    .faq details p {                        /* FAQ details text */
+        margin: 0 0 5px;
+        padding: 0;
+        border-radius: 2.5px;
+        padding: 10px;
+}
+
+    .login_form {                           /* Login form, don't know how i made */
+        position: absolute;
+        display:inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: none;
+        max-width: none;
+
+        padding: 50px 5% 50px 5%;
+        border-radius: 10px;
+        background-color: var(--nav1);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        scroll-snap-align: start;
+}
+
+    .login_form input {
+        background-color: var(--nav2);
+        color: var(--placeholder);
+        cursor: pointer;
+}
+
+    .login_form input[type="submit"]:hover {
+        background-color: var(--nav2);
+}
+
+    .login_form .loginbtn {                                /* Login button style */
+        width: 100%;                                       /* It would be nice if it was centered... but heyy thats a problem for later ^_^ */
+        padding: 5px;
+        margin-top: 10px;
+        border-radius: 20px;
+        background-color: var(--back_placeholder);
+        color: var(--placeholder);
+        border: 1px solid var(--nav0);
+        text-align: center;
+        cursor: pointer;
+}
+
+    .login_form .input {                                /* Input field style */
+        width: 55%;
+        background-color: var(--back_placeholder);
+        color: var(--placeholder);
+        border: 1px solid var(--nav0);
+        margin-left: 20px;
+        display: inline-block;
+        flex-grow: calc(100% - 20px);
+        border-radius: 20px;
+        margin-bottom: 10px;
+        justify-content:flex-end;
+}
+
+
+
+
+/* Media queries start here */
+
+
+
+
+@media screen and (min-width: 601px) {      /* Media query for Desktop UI */
+    .menu_icon img {
+        width: 45px;
+        height: 45px; 
+    }
+    
+    .search_bar {
+        margin: auto;
+        min-width: 150px;
+        max-width: 300px;
+        width: 50%;
+    }
+
+    .log_in {
+        position: relative;
+        display: flex;
+        color: var(--text2);
+        text-decoration: none;
+        margin-right: 10%;
+    }
+    
+    .menu_icon {
+        cursor: pointer;
+        position: relative;
+        margin-left: 10%;
+    }
+
+    .faq {
+        width: 70%;
+        height: 70%;
+    }
+
+    .faq h1 {
+        font-size: 150%;
+    }
+
+}
+
+
+
+
+/* Media query for Phone UI start here */
+
+
+
+
+@media screen and (max-width: 600px) {
+    .menu_icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .search_bar {
+        margin-right: 8.5%;
+        min-width: 100px;
+        max-width: 250px;
+        width: 55%;
+    }
+
+    .log_in {
+        display: none;
+    }
+    
+    .menu_icon {
+        cursor: pointer;
+        position: relative;
+        margin-left: 8.5%;
+    }
+
+    .faq {
+        width: 80%;
+        height: 80%;
+    }
+
+    .faq h1 {
+        font-size: 125%;
+    }
+
+}

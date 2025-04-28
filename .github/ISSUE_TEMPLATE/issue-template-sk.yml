@@ -1,0 +1,100 @@
+name: Issue template SK
+about: Vytvorte správu, ktorá nám pomôže zlepšiť stránku
+labels: [Bug]
+body:
+
+  - type: textarea
+    id: reproduce-steps
+    attributes:
+      label: Kroky na zopakovanie daného správania.
+      description: Uveďte príklad problému.
+      placeholder: |
+        Napríklad:
+            1. Prejdite na '...'
+            2. Kliknite na '....'
+            3. Posuňte nadol na '....'
+            4. Daná chyba
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Očakávané správanie
+      description: Vysvetlite, čo by ste mali očakávať, že sa stane.
+      placeholder: |
+        Napríklad:
+          "Toto sa malo stať..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Skutočné správanie
+      description: Vysvetlite, čo sa v skutočnosti stane.
+      placeholder: |
+        Napríklad:
+          "Namiesto toho sa stalo toto..."
+    validations:
+      required: true
+
+  - type: input
+    id: OS
+    attributes:
+      label: Verzia operačného systému
+      description: Toto nájdete niekde v nastaveniach.
+      placeholder: |
+        Napríklad: "Android 11, Windows 11, atď."
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Vaše zariadenie, kde sa vám táto chyba stáva/stala.
+      description: Vypíšte vaše zariadenie.
+      placeholder: |
+        Napríklad: "Google Pixel 5, PC, atď."
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Prehliadač
+      description: Vypíšte prehliadač, kde sa vám táto chyba stáva/stala.
+      placeholder: |
+        Napríklad: "Chrome, Firefox, atď."
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: Verzia prehliadača
+      description: Ak je to možné, priložte verziu vášho prehliadača..
+      placeholder: |
+        Napríklad: "22.0.0, atď."
+
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Ďalší kontext
+      placeholder: |
+        Ďalšie informácie a prílohy
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Potvrdenia
+      description: Prečítajte si toto poriadne, ak zistíme, že ste nevyplnili, to čo máte, vašu požiadavku uzavrieme a budeme ju ignorovať.
+      options:
+        - label: Vyhľadal som existujúce problémy a toto je nový problém, **NIE** je to duplikát, ani sa netýka iného otvoreného alebo uzavretého problému.
+          required: true
+        - label: Napísal som krátky, ale informatívny názov.
+          required: true
+        - label: Vyplnil som všetky požadované a povinné informácie v tomto formulári.
+          required: true
+        - label: Túto webovú stránku som nemodifikoval pomocou žiadnych skriptov/rozšírení, ktoré by mohli spôsobovať tento problém.
+          required: true
