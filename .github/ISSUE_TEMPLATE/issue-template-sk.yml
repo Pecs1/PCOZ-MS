@@ -1,5 +1,5 @@
 name: Issue template SK
-about: Vytvorte správu, ktorá nám pomôže zlepšiť stránku
+description: Vytvorte správu, ktorá nám pomôže zlepšiť stránku
 labels: [Bug]
 body:
 
