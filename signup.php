@@ -23,14 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $msg = $translations[113]['error'] ?? $translations[114]['error'];
         } else {
             // Check if the personal ID or email already exists
-            $stmt = $pdo->prepare("SELECT COUNT(*) FROM users1 WHERE personal_id = :personal_id OR email = :email");
+            $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE personal_id = :personal_id OR email = :email");
             $stmt->execute(['personal_id' => $personal_id, 'email' => $email]);
             if ($stmt->fetchColumn() > 0) {
                 $msg = $translations[115]['error'] ?? $translations[116]['error'];
             } else {
                 // Hash the password and insert the user
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                $stmt = $pdo->prepare("INSERT INTO users1 (personal_id, name, surname, email, preferred_lang, password) 
+                $stmt = $pdo->prepare("INSERT INTO users (personal_id, name, surname, email, preferred_lang, password) 
                                        VALUES (:personal_id, :first_name, :last_name, :email, :lang, :password)");
                 $stmt->execute([
                     'personal_id' => $personal_id,

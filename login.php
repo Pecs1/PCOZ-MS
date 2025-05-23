@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
             $msg = htmlspecialchars($translations[101]['error'] ?? $translations[102]['error']);
         } else {
             // Fetch user data
-            $stmt = $pdo->prepare("SELECT name, surname, password, failed_attempts, last_attempt_time FROM users1 WHERE personal_id = :personal_id");
+            $stmt = $pdo->prepare("SELECT name, surname, password, failed_attempts, last_attempt_time FROM users WHERE personal_id = :personal_id");
             $stmt->execute(['personal_id' => $personal_id]);
             $user = $stmt->fetch();
 
@@ -59,14 +59,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                         $_SESSION['surname'] = $user['surname'];
 
                         // Reset failed attempts on successful login
-                        $stmt = $pdo->prepare("UPDATE users1 SET failed_attempts = 0 WHERE personal_id = :personal_id");
+                        $stmt = $pdo->prepare("UPDATE users SET failed_attempts = 0 WHERE personal_id = :personal_id");
                         $stmt->execute(['personal_id' => $personal_id]);
 
                         header("Location: index.php");
                         exit;
                     } else {
                         // Increment failed attempts
-                        $stmt = $pdo->prepare("UPDATE users1 SET failed_attempts = failed_attempts + 1, last_attempt_time = NOW() WHERE personal_id = :personal_id");
+                        $stmt = $pdo->prepare("UPDATE users SET failed_attempts = failed_attempts + 1, last_attempt_time = NOW() WHERE personal_id = :personal_id");
                         $stmt->execute(['personal_id' => $personal_id]);
                         $msg = htmlspecialchars($translations[105]['error'] ?? $translations[106]['error']);
                     }
