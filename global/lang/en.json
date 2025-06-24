@@ -1,0 +1,110 @@
+{
+  "search-input": {
+    "placeholder": "E.g. CNC, Signal amplifier,..."
+  },
+
+  "login": "Log in",
+
+  "home": "Home",
+
+  "faq-short": "Frequently asked",
+
+  "faq": "Frequently Asked Questions",
+
+  "register": "Register",
+
+  "password": "Password",
+
+  "personal-id": "Personal ID",
+
+  "confirm-password": "Confirm Password",
+
+  "email": "Email",
+
+  "first-name": "Name",
+
+  "surname": "Surname",
+
+  "reset-info": "Reset inputted information",
+
+  "tos": "Terms of Service",
+
+  "login-credentials": "Login Credentials",
+
+  "logout": "Log out",
+
+  "errors": {
+
+    "invalid-csrf-token": "Invalid CSRF token",
+
+    "too-many-attempts": "Too many failed attempts. Please try again later.",
+
+    "invalid-id-password": "Invalid Personal ID or Password.",
+
+    "access-denied": "Access denied",
+
+    "invalid-email": "Invalid email address",
+
+    "passwords-do-not-match": "Passwords do not match",
+
+    "password-requirements": "Password must have 6 characters and contain at least one uppercase letter and a number ",
+
+    "id-email-exists": "Personal ID or email already exists",
+
+    "account-created-success": "Account created successfully.",
+
+    "database-error": "Database error :("
+  },
+  
+  "faq-questions": [
+    {
+      "key": "faq-q1",
+      "question": "What is this page for?",
+      "answer": "This website serves to upload your Secondary School Professional Activities to the server for easy and systematic organization for SPŠT school in Trnava."
+    },
+
+    {
+      "key": "faq-q2",
+      "question": "What does PČOZ-MS mean?",
+      "answer": "Praktická Časť Odbornej Zložky - Maturitnej Skúšky is a form of assessment of the practical skills and competencies of a secondary vocational school student in their specific field of study, which is part of the final Matura exam."
+    },
+
+    {
+      "key": "faq-q3",
+      "question": "What is SOČ?",
+      "answer": "Stredoškolská odborná činnosť is a Slovak competition where secondary school students between ages 15-21 work on and present projects they're interested in. It's a way to explore their passions and develop skills."
+    },
+
+    {
+      "key": "faq-q4",
+      "question": "What if something doesn't work or I don't like something?",
+      "answer": "In this case, you can open a new issue on my GitHub.",
+      "answer-link-text": "issue",
+      "answer-link-url": "https://github.com/Pecs1/PCOZ-MS/issues"
+    },
+
+    {
+      "key": "faq-q5",
+      "question": "Who will see my SOČ project?",
+      "answer": "Registered users will have access to a portion of your submitted SOČ, specifically the title and a short description. The complete documentation will be visible exclusively to teachers and the user who uploaded the SOČ."
+    },
+
+    {
+      "key": "faq-q6",
+      "question": "How do I document SOČ project on this website?",
+      "answer": "If only I knew..."
+    },
+
+    {
+      "key": "faq-q7",
+      "question": "What if I forget my account password?",
+      "answer": "Don't worry, password recovery will (possibly) be available on this page."
+    },
+
+    {
+      "key": "faq-q8",
+      "question": "What if I accidentally submit the SOČ project before I have finished it?",
+      "answer": "In this case, you must ask the teacher you are working with to give you access again. However, you must be careful, because this option will only be available for a certain time."
+    }
+  ]
+}

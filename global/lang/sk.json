@@ -1,0 +1,103 @@
+{
+     "search-input": {
+          "placeholder": "napr. CNC, Zosilňovače signálu,..."
+     },
+
+     "login": "Prihlásiť sa",
+
+     "home": "Domov",
+
+     "faq-short": "Časté otázky",
+
+     "faq": "Často Pýtané Otázky",
+
+     "register": "Zaregistrovať sa",
+
+     "password": "Heslo",
+
+     "personal-id": "Rodné číslo",
+
+     "confirm-password": "Potvrďte heslo",
+
+     "email": "E-mail",
+
+     "first-name": "Meno",
+
+     "surname": "Priezvisko",
+
+     "reset-info": "Resetovať zadané informácie",
+
+     "tos": "Podmienky Používania",
+
+     "login-credentials": "Prihlasovacie údaje",
+
+     "logout": "Odhlásiť sa",
+
+     "errors": {
+
+          "invalid-csrf-token": "Neplatný CSRF token",
+
+          "too-many-attempts": "Príliš veľa neúspešných pokusov. Skúste to znova neskôr.",
+
+          "invalid-id-password": "Neplatné rodné číslo alebo heslo",
+
+          "access-denied": "Prístup bol odmietnutý",
+
+          "invalid-email": "Neplatná e-mailová adresa",
+
+          "passwords-do-not-match": "Heslá sa nezhodujú",
+
+          "password-requirements": "Heslo musí byť dlhé minimálne 6 znakov a musí obsahovať aspoň jedno veľké písmeno a jednu číslicu",
+
+          "id-email-exists": "Zadané identifikačné číslo alebo e-mail už existuje",
+
+          "account-created-success": "Váš účet bol úspešne vytvorený",
+
+          "database-error": "Chyba databázy :("
+     },
+
+  "faq-questions": [
+    {
+      "key": "faq-q1",
+      "question": "Na čo táto stránka slúži?",
+      "answer": "Táto stránka slúži na nahrávanie Stredoškolských odborných činností na server pre jednoduché a systematické usporiadanie pre školu SPŠT v Trnave."
+    },
+    {
+      "key": "faq-q2",
+      "question": "Čo znamená PČOZ-MS?",
+      "answer": "Praktická Časť Odbornej Zložky - Maturitnej Skúšky je forma overenia praktických zručností a kompetencií študenta strednej odbornej školy v danom študijnom odbore, ktorá je súčasťou záverečnej maturitnej skúšky."
+    },
+    {
+      "key": "faq-q3",
+      "question": "Čo je to SOČka (SOČ)?",
+      "answer": "Stredoškolská odborná činnosť je slovenská súťaž, v ktorej študenti stredných škôl vo vekoch 15-21 rokov pracujú na projektoch, ktoré ich zaujímajú, a následne ich prezentujú. Je to spôsob, ako preskúmať svoje záujmy a rozvíjať zručnosti."
+    },
+    {
+      "key": "faq-q4",
+      "question": "Čo ak niečo nefunguje alebo sa mi nepáči?",
+      "answer": "V takomto prípade môžete otvoriť novú issue na mojom GitHub repozitári.",
+      "answer-link-text": "issue",
+      "answer-link-url": "https://github.com/Pecs1/PCOZ-MS/issues"
+    },
+    {
+      "key": "faq-q5",
+      "question": "Kto všetko uvidí moju SOČku?",
+      "answer": "Registrovaní používatelia budú mať prístup k časti vašej odovzdanej SOČ, konkrétne k názvu a stručnému popisu. Kompletnú dokumentáciu uvidia výhradne učitelia a používateľ, ktorý danú SOČ odovzdal."
+    },
+    {
+      "key": "faq-q6",
+      "answer": "To keby viem sám...",
+      "question": "Ako viem zdokumentovať SOčku na tejto stránke?"
+    },
+    {
+      "key": "faq-q7",
+      "question": "Čo ak zabudnem heslo k účtu?",
+      "answer": "Nebojte sa, na tejto stránke sa (možno) bude dať obnoviť heslo pre účet."
+    },
+    {
+      "key": "faq-q8",
+      "question": "Čo ak omylom odovzdám SOČku skôr, ako som ju dokončil?",
+      "answer": "V tomto prípade musíte poprosiť učiteľa, s ktorým pracujete, aby vám dal znova prístup. Treba si však dávať pozor, lebo táto možnosť bude dostupná len do určitého času."
+    }
+  ]
+}
