@@ -1,0 +1,202 @@
+/* UI + UX isn't the best, plan to fix it later™.
+
+I plan to implement a dark mode, but for now I will just use the light mode.
+I plan to automatize updating this website from my github repository, but for now I will just use the manual way.
+
+There are a lot of things that need to be done/finished thats why I will try to make it functional at first and then
+i will try to make it look good. Ofc i will try to make it responsive (famous last words). */
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    letter-spacing: normal;
+}
+
+:root {
+    --main-dark: #1F4D70;                       /* Colors for main style */
+    --main: #2c70a3;                            /* Colors for main style */
+    --main-light: #3F8ECA;                      /* Colors for main style */
+    --main-lighter: #6FAAD8;                    /* Colors for main style */ 
+    --text: #f0e8e8;                            /* Colors for text*/
+    --text-alt: #ece3e3;                        /* Colors for text*/
+    --placeholder: #000000;                     /* Color for placeholder */
+    --back-placeholder: #efe7e7e0;              /* Color for background of placeholder */
+    --background: #f0e8e8;                      /* Color for background */
+    --confirm: #00ff00;                         /* Color for confirmation */
+    --err: #dc4747;                             /* Color for error */
+}
+
+/*    @media (prefers-color-scheme: light) {
+        :root {
+            --background: #141313;          same as :root, but in dark mode soon™
+            --text-alt: #bbb0b0;
+            --text: #060606;
+        }           
+
+    body {
+        background-color: var(--background);
+    }
+
+}
+*/
+
+/* shared styles */
+
+    .nav_bar {                                /* Navigation bar */
+        width: 100%;
+        height: auto;
+        background-color: var(--main);
+        color: var(--text);
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 5;
+}
+
+    .search_bar_input::placeholder {          /* Now section where i don't know how i even made from here */
+        color: var(--placeholder);
+        text-align: center;
+}
+
+    #menu_toggle {
+        display: none;
+}
+
+    #menu_toggle:checked + .menu_icon + .dropdown_menu {
+        display: block;
+}
+
+    .dropdown_menu a:hover {
+        background-color: var(--main-dark);
+        transition: background-color 0.3s ease;
+}
+
+    .dropdown_menu {
+        display: none;
+        position: absolute;
+        scroll-snap-align: start;
+        top: 100%;
+        left: 0; 
+        background-color: var(--main);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+    .dropdown_menu a {
+        color: var(--text);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        margin-left: 0;                       /* to here */
+}
+
+    .search_bar .input {
+        background-color: var(--back-placeholder);
+        width: 100%;
+        border-radius: 10px;
+}
+
+    .links {                                  /* Links to white with underline */
+        color: var(--text);
+        cursor: alias;
+        text-decoration: none;
+}
+
+
+/* Media queries start here */
+
+
+
+
+@media screen and (min-width: 601px) {      /* Media query for Desktop UI */
+    .menu_icon img {
+        width: 45px;
+        height: 45px; 
+    }
+    
+    .search_bar {
+        margin: auto;
+        min-width: 150px;
+        max-width: 300px;
+        width: 50%;
+    }
+
+    .log_in {
+        position: relative;
+        display: flex;
+        color: var(--text-alt);
+        text-decoration: none;
+        margin-right: 10%;
+    }
+    
+    .menu_icon {
+        cursor: pointer;
+        position: relative;
+        margin-left: 10%;
+    }
+
+    .faq {
+        width: 70%;
+        height: 70%;
+        font-size: 1.3rem;
+    }
+
+    .faq h1 {
+        font-size: 150%;
+    }
+
+    .signup_form {
+        margin: 70px auto 1% auto;
+    }
+}
+
+
+
+
+/* Media query for Phone UI start here */
+
+
+
+
+@media screen and (max-width: 600px) {
+    .menu_icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .search_bar {
+        margin-right: 8.5%;
+        min-width: 100px;
+        max-width: 250px;
+        width: 55%;
+    }
+
+    .log_in {
+        display: none;
+    }
+    
+    .menu_icon {
+        cursor: pointer;
+        position: relative;
+        margin-left: 8.5%;
+    }
+
+    .faq {
+        width: 80%;
+        height: 80%;
+        font-size: 1rem;
+    }
+
+    .faq h1 {
+        font-size: 125%;
+    }
+
+    .signup_form {
+        margin: 50px auto 1% auto;
+    }
+
+}

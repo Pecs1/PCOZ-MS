@@ -1,0 +1,66 @@
+:root {
+    --main-dark: #1F4D70;                       /* Colors for main style */
+    --main: #2c70a3;                            /* Colors for main style */
+    --main-light: #3F8ECA;                      /* Colors for main style */
+    --main-lighter: #6FAAD8;                    /* Colors for main style */ 
+    --text: #f0e8e8;                            /* Colors for text*/
+    --text-alt: #ece3e3;                        /* Colors for text*/
+    --placeholder: #000000;                     /* Color for placeholder */
+    --back-placeholder: #efe7e7e0;              /* Color for background of placeholder */
+    --background: #f0e8e8;                      /* Color for background */
+}
+
+
+    .faq {                                   /* FAQ section */
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: none;
+        max-width: none;
+        flex-direction: column;
+        color: var(--text);
+}
+
+    .faq h1 {                                /* FAQ title */
+        text-align: center;
+        background-color: var(--main);
+        padding: 10px;
+        border-radius: 10px;
+        color: var(--text);
+        margin-top: 0;
+        margin-bottom: 30px;
+}
+   
+    .faq details {                          /* FAQ details aka answer */
+        margin-bottom: 10px;
+        border-radius: 2.5px;
+}
+
+    .faq summary {                          /* FAQ summary aka question */
+        cursor: pointer;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: var(--main);
+}
+    
+    .faq summary:hover {                    /* self explainable ngl */
+        background-color: var(--main-dark);
+        transition: background-color 0.3s ease;
+        border: var(--main-light);
+}
+
+    .faq details[open] {                    /* FAQ style details when open */
+        border: 1px solid var(--main);
+        background-color: var(--main-light);
+        border-radius: 10px;
+}
+        
+    .faq details p {                        /* FAQ details text */
+        margin: 0 0 5px;
+        padding: 0;
+        border-radius: 2.5px;
+        padding: 10px;
+}

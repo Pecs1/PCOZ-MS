@@ -87,16 +87,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($translations[3]['common'] ?? $translations[4]['common']); ?></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/global/css/defaultstyle.css">
+    <link rel="stylesheet" href="/global/css/authentication.css">
 </head>
 <body>
 <div class="nav_bar">
     <input type="checkbox" id="menu_toggle" class="menu_toggle">
     <label for="menu_toggle" class="menu_icon">
-        <img src="assets/menu.png" alt="Menu">
+        <img src="/global/pics/menu.png" alt="Menu">
     </label>
     <div class="dropdown_menu">
-        <a href="index.php"><?php echo htmlspecialchars($translations[5]['common'] ?? $translations[6]['common']); ?></a>
+        <a href="/"><?php echo htmlspecialchars($translations[5]['common'] ?? $translations[6]['common']); ?></a>
         <a href="faq.php"><?php echo htmlspecialchars($translations[7]['common'] ?? $translations[8]['common']); ?></a>
         <a href="login.php"><?php echo htmlspecialchars($translations[3]['common'] ?? $translations[4]['common']); ?></a>
     </div>
