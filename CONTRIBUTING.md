@@ -29,14 +29,17 @@ Before you start, please note that the ability and knowledge to use these progra
 
 ## Getting help
 
-- Join [the Discord server](https://discord.gg/mihon) for online help and to ask questions while developing.
+If you have questions about the code, please open an issue on GitHub. We will do our best to help you.
 
 ## Forks
 
-Forks are allowed so long as they abide by [the project's LICENSE](https://github.com/mihonapp/mihon/blob/main/LICENSE).
+Forks are allowed so long as they abide by [the project's LICENSE](https://github.com/Pecs1/PCOZ-MS/blob/main/LICENSE).
 
 When creating a fork, remember to:
 
 - To avoid confusion with the main website:
   - Change the website name
   - Change the website icon
+
+- Make your own database
+- Change the database connection settings in `config.php` accordingly.
