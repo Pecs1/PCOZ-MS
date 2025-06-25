@@ -4,7 +4,7 @@
     --main-light: #3F8ECA;                      /* Colors for main style */
     --main-lighter: #6FAAD8;                    /* Colors for main style */ 
     --text: #f0e8e8;                            /* Colors for text*/
-    --text-alt: #ece3e3;                        /* Colors for text*/
+    --text-alt: #1a1818;                        /* Colors for text*/
     --placeholder: #000000;                     /* Color for placeholder */
     --back-placeholder: #efe7e7e0;              /* Color for background of placeholder */
     --background: #f0e8e8;                      /* Color for background */
@@ -203,4 +203,19 @@
         font-size: 1.5rem;
         margin-top: 10px;
         text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .signup_form {
+        margin: 70px auto 1% auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .signup_form {
+        margin: 50px auto 1% auto;
+        min-width: 150px;
+        max-width: 300px;
+        width: 50%;
+    }
 }

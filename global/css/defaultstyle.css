@@ -19,7 +19,7 @@ body {
     --main-light: #3F8ECA;                      /* Colors for main style */
     --main-lighter: #6FAAD8;                    /* Colors for main style */ 
     --text: #f0e8e8;                            /* Colors for text*/
-    --text-alt: #ece3e3;                        /* Colors for text*/
+    --text-alt: #1a1818;                        /* Colors for text*/
     --placeholder: #000000;                     /* Color for placeholder */
     --back-placeholder: #efe7e7e0;              /* Color for background of placeholder */
     --background: #f0e8e8;                      /* Color for background */
@@ -39,71 +39,112 @@ body {
     }
 
 }
-*/
+`*/
 
-/* shared styles */
-
-    .nav_bar {                                /* Navigation bar */
-        width: 100%;
-        height: auto;
-        background-color: var(--main);
-        color: var(--text);
-        display: flex;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 5;
+.navbar {                                /* Navigation bar */
+    width: 100%;
+    height: auto;
+    background-color: var(--main);
+    display: flex;
+    position:fixed;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    overflow: visible;
 }
 
-    .search_bar_input::placeholder {          /* Now section where i don't know how i even made from here */
-        color: var(--placeholder);
-        text-align: center;
+.menu {                                  /* Menu */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: auto;
+    margin-left: 5%;
 }
 
-    #menu_toggle {
-        display: none;
+.menu .menu_icon img {
+    cursor: pointer;
+    position: relative;
 }
 
-    #menu_toggle:checked + .menu_icon + .dropdown_menu {
-        display: block;
+#menu_toggle {
+    display: none;
 }
 
-    .dropdown_menu a:hover {
-        background-color: var(--main-dark);
-        transition: background-color 0.3s ease;
+#menu_toggle:checked + .menu_icon + .dropdown_menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px 0;
 }
 
-    .dropdown_menu {
-        display: none;
-        position: absolute;
-        scroll-snap-align: start;
-        top: 100%;
-        left: 0; 
-        background-color: var(--main);
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.locale_switcher {
+    width: auto;
+    max-width: 100%;
+    align-self: center;
+    color: var(--text);
+    background-color: var(--main);
+    border: var(--main-dark) 1px solid;
+    border-radius: 5px;
+
+
 }
 
-    .dropdown_menu a {
-        color: var(--text);
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        margin-left: 0;                       /* to here */
+.dropdown_menu a:hover {
+    background-color: var(--main-dark);
+    transition: background-color 0.3s ease;
 }
 
-    .search_bar .input {
-        background-color: var(--back-placeholder);
-        width: 100%;
-        border-radius: 10px;
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    scroll-snap-align: start;
+    top: 100%;
+    left: 0; 
+    background-color: var(--main);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    overflow: visible;
 }
 
-    .links {                                  /* Links to white with underline */
-        color: var(--text);
-        cursor: alias;
-        text-decoration: none;
+.dropdown_menu a, .locale_switcher {
+    color: var(--text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-left: 0;
+}
+
+.search_bar {                            /* Search bar */
+    position: center;
+    display: inline;
+}
+
+.search_bar .input {
+    background-color: var(--back-placeholder);
+    width: 100%;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.links {                                  /* Links to white with underline */
+    color: var(--text);
+    cursor: alias;
+    text-decoration: none;
+}
+
+.user_info {
+    position: relative;
+    display: inline;
+    color: var(--text);
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.user_info .log_in {
+    color: var(--text);
+    text-decoration: none;
 }
 
 
@@ -113,44 +154,17 @@ body {
 
 
 @media screen and (min-width: 601px) {      /* Media query for Desktop UI */
-    .menu_icon img {
+
+    .menu .menu_icon img {
         width: 45px;
         height: 45px; 
+        transition: width 0.3s ease, height 0.3s ease;
     }
     
     .search_bar {
-        margin: auto;
         min-width: 150px;
         max-width: 300px;
         width: 50%;
-    }
-
-    .log_in {
-        position: relative;
-        display: flex;
-        color: var(--text-alt);
-        text-decoration: none;
-        margin-right: 10%;
-    }
-    
-    .menu_icon {
-        cursor: pointer;
-        position: relative;
-        margin-left: 10%;
-    }
-
-    .faq {
-        width: 70%;
-        height: 70%;
-        font-size: 1.3rem;
-    }
-
-    .faq h1 {
-        font-size: 150%;
-    }
-
-    .signup_form {
-        margin: 70px auto 1% auto;
     }
 }
 
@@ -163,40 +177,18 @@ body {
 
 
 @media screen and (max-width: 600px) {
-    .menu_icon img {
-        width: 35px;
-        height: 35px;
+
+    .menu .menu_icon img {
+        width: 30px;
+        height: 30px;
+        transition: width 0.3s ease, height 0.3s ease;
     }
     
     .search_bar {
-        margin-right: 8.5%;
-        min-width: 100px;
-        max-width: 250px;
-        width: 55%;
-    }
 
-    .log_in {
-        display: none;
-    }
-    
-    .menu_icon {
-        cursor: pointer;
-        position: relative;
-        margin-left: 8.5%;
-    }
-
-    .faq {
-        width: 80%;
-        height: 80%;
-        font-size: 1rem;
-    }
-
-    .faq h1 {
-        font-size: 125%;
-    }
-
-    .signup_form {
-        margin: 50px auto 1% auto;
+        min-width: 150px;
+        max-width: 300px;
+        width: 50%;
     }
 
 }

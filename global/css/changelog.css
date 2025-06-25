@@ -1,0 +1,59 @@
+:root {
+    --main-dark: #1F4D70;                       /* Colors for main style */
+    --main: #2c70a3;                            /* Colors for main style */
+    --main-light: #3F8ECA;                      /* Colors for main style */
+    --main-lighter: #6FAAD8;                    /* Colors for main style */ 
+    --text: #f0e8e8;                            /* Colors for text*/
+    --text-alt: #1a1818;                        /* Colors for text*/
+    --placeholder: #000000;                     /* Color for placeholder */
+    --back-placeholder: #efe7e7e0;              /* Color for background of placeholder */
+    --background: #f0e8e8;                      /* Color for background */
+}
+
+.changelog {
+     max-width: 75%;
+     margin: 20px auto;
+     background-color: var(--background);
+     padding: 30px;
+     border-radius: 8px;
+     border-color: var(--main-dark);
+     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+     margin-top: 10%;
+}
+
+.changelog h1 {
+     text-align: center;
+     color: var(--text-alt);
+     margin-bottom: 20px;
+}
+
+.changelog h2, h3, h4, h5, h6, p, li {
+     margin-top: 10px;
+     color: var(--text-alt);
+}
+
+.changelog a {
+     color: var(--text-alt);
+     text-decoration: underline;
+}
+
+.changelog a:hover {
+     color: var(--main-light);
+     transition: color 0.2s ease;
+}
+
+
+h1 {
+     border-bottom: 2px solid var(--placeholder); 
+     padding-bottom: 0.3em; 
+}
+
+h2 {
+     border-bottom: 1px solid var(--text-alt); 
+     padding-bottom: 0.2em; 
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
