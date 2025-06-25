@@ -1,5 +1,5 @@
 name: Issue template SK
-description: Vytvorte správu, ktorá nám pomôže zlepšiť stránku
+description: Vytvorte správu pre zlepšenie stránky
 labels: [Bug]
 body:
 
@@ -21,10 +21,10 @@ body:
     id: expected-behavior
     attributes:
       label: Očakávané správanie
-      description: Vysvetlite, čo by ste mali očakávať, že sa stane.
+      description: Vysvetlite, čo sa malo stať.
       placeholder: |
         Napríklad:
-          "Toto sa malo stať..."
+          "Ked posuniem kurzor nižšie sa malo stať..."
     validations:
       required: true
 
@@ -40,32 +40,12 @@ body:
       required: true
 
   - type: input
-    id: OS
-    attributes:
-      label: Verzia operačného systému
-      description: Toto nájdete niekde v nastaveniach.
-      placeholder: |
-        Napríklad: "Android 11, Windows 11, atď."
-    validations:
-      required: true
-
-  - type: input
-    id: device
-    attributes:
-      label: Vaše zariadenie, kde sa vám táto chyba stáva/stala.
-      description: Vypíšte vaše zariadenie.
-      placeholder: |
-        Napríklad: "Google Pixel 5, PC, atď."
-    validations:
-      required: true
-
-  - type: input
     id: browser
     attributes:
       label: Prehliadač
       description: Vypíšte prehliadač, kde sa vám táto chyba stáva/stala.
       placeholder: |
-        Napríklad: "Chrome, Firefox, atď."
+        Napríklad: "Chrome, Firefox"
     validations:
       required: true
 
@@ -73,14 +53,14 @@ body:
     id: browser-version
     attributes:
       label: Verzia prehliadača
-      description: Ak je to možné, priložte verziu vášho prehliadača..
+      description: Ak je to možné, priložte verziu vášho prehliadača.
       placeholder: |
         Napríklad: "22.0.0, atď."
 
   - type: textarea
     id: other-details
     attributes:
-      label: Ďalší kontext
+      label: Ďalší kontext a/alebo snímky obrazovky
       placeholder: |
         Ďalšie informácie a prílohy
 
@@ -88,9 +68,9 @@ body:
     id: acknowledgements
     attributes:
       label: Potvrdenia
-      description: Prečítajte si toto poriadne, ak zistíme, že ste nevyplnili, to čo máte, vašu požiadavku uzavrieme a budeme ju ignorovať.
+      description: Prečítajte si toto poriadne, ak zistíme, že ste nevyplnili, to čo máte, vašu požiadavku uzavrieme a budeme ju ignorovať. **AK SA TENTO PROBLÉM TÝKA BEZPEČNOSTNEJ ZRANITEĽNOSTI, NAHLÁSTE HO SÚKROMNE SPRÁVCOM.**
       options:
-        - label: Vyhľadal som existujúce problémy a toto je nový problém, **NIE** je to duplikát, ani sa netýka iného otvoreného alebo uzavretého problému.
+        - label: Vyhľadal som existujúce problémy v slovenčine aj v angličtine a toto je **NOVÝ** problém, **NIE** duplikát, ani sa netýka iného otvoreného alebo uzavretého problému.
           required: true
         - label: Napísal som krátky, ale informatívny názov.
           required: true

@@ -1,5 +1,5 @@
 name: Feature request SK
-description: Navrhnite nápad/funkciu pre túto stránku
+description: Nový nápad alebo funkcia pre túto stránku
 labels: [Feature request]
 body:
 
@@ -10,14 +10,14 @@ body:
       description: Ako môže byť táto webová stránka vylepšená?
       placeholder: |
         Napríklad:
-          "Malo by to fungovať takto..."
+          "V nastaveniach by mala byť možnosť..."
     validations:
       required: true
 
   - type: textarea
     id: other-details
     attributes:
-      label: Ďalšie informácie
+      label: Ďalšie informácie a/alebo snímky obrazovky
       placeholder: |
         Ďalšie podrobnosti a prílohy.
 
@@ -27,7 +27,7 @@ body:
       label: Potvrdenia
       description: Prečítajte si toto poriadne, ak zistíme, že ste nevyplnili, to čo máte, vašu požiadavku uzavrieme a budeme ju ignorovať.
       options:
-        - label: Vyhľadal som existujúce problémy a toto je nový problém, **NIE** je to duplikát, ani sa netýka iného otvoreného alebo uzavretého problému.
+        - label: Vyhľadal som existujúce problémy v slovenčine a v angličtine a toto je **NOVÝ** problém, **NIE** duplikát, ani sa netýka iného otvoreného alebo uzavretého problému.
           required: true
         - label: Napísal som krátky, ale informatívny názov.
           required: true

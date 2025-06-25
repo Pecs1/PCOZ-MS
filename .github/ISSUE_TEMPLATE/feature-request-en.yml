@@ -1,5 +1,5 @@
 name: Feature request EN
-description: Suggest an idea/feature for this website
+description: New idea or a feature for this website
 labels: [Feature request]
 body:
 
@@ -10,7 +10,7 @@ body:
       description: How can this website be improved?
       placeholder: |
         Example:
-          "It should work like this..."
+          "In settings there should be an option to..."
     validations:
       required: true
 
@@ -27,7 +27,7 @@ body:
       label: Acknowledgements
       description: Read this carefully, we will close and ignore your issue if you skimmed through this.
       options:
-        - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open or closed issue.
+        - label: I have searched the existing issues in slovak and in english and this is a **NEW** ticket, **NOT** a duplicate or related to another open or closed issue.
           required: true
         - label: I have written a short but informative title.
           required: true
