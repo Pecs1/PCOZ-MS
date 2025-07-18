@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Looking to report an issue/bug or make a feature request? Please refer to the [README file](https://github.com/Pecs1/PCOZ-MS/blob/main/README.md).
+Looking to report an issue/bug or make a feature request? Please refer to the [README file](README.md).
 
 ---
 
@@ -13,6 +13,10 @@ Pull requests are welcome!
 If you're interested in taking on [an open issue](https://github.com/Pecs1/PCOZ-MS/issues), please comment on it so others are aware.
 You do not need to ask for permission nor an assignment.
 
+### Tools
+
+- [XAMPP](https://www.apachefriends.org/) or other local server development environment
+
 ## Prerequisites
 
 Before you start, please note that the ability and knowledge to use these programming languages is **required** and that existing contributors will not actively teach them to you.
@@ -22,10 +26,41 @@ Before you start, please note that the ability and knowledge to use these progra
 - [PHP](https://www.php.net/manual/en/)
 - [MySQL](https://www.mysql.com/)
 - [JavaScript](https://www.w3schools.com/js/)
+<br><br>
+- configure httpd.conf for XAMPP
 
-### Tools
+  - for linux system
+    ```
+    <Directory />
+      AllowOverride None
+      Require all granted
+      Options FollowSymLinks
+    </Directory>
 
-- [XAMPP](https://www.apachefriends.org/) or other local server development environment
+    DocumentRoot "/opt/lampp/htdocs/public"
+    <Directory "/opt/lampp/htdocs/public">
+      Options FollowSymLinks
+      AllowOverride None
+      Require all granted
+    </Directory>
+    ```
+
+  - for windows system
+
+    ```
+    <Directory />
+      AllowOverride None
+      Require all granted
+      Options FollowSymLinks
+    </Directory>
+
+    DocumentRoot "C:/xampp/htdocs/public" # or other directory/partition label where xampp is located
+    <Directory "C:/xampp/htdocs/public">
+      Options FollowSymLinks
+      AllowOverride None
+      Require all granted
+    </Directory>
+    ```
 
 ## Getting help
 
@@ -42,4 +77,5 @@ When creating a fork, remember to:
   - Change the website icon
 
 - Make your own database
-- Change the database connection settings in `config.php` accordingly.
+  - Change the database connection settings in [config.php](config.php) accordingly.
+- Dont forget to configure [httpd.conf](CONTRIBUTING.md#prerequisites)
