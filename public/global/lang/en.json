@@ -33,6 +33,8 @@
 
   "logout": "Log out",
 
+  "changelog": "Changelog",
+
   "errors": {
 
     "invalid-csrf-token": "Invalid CSRF token",
@@ -66,7 +68,7 @@
     {
       "key": "faq-q2",
       "question": "What does PČOZ-MS mean?",
-      "answer": "Praktická Časť Odbornej Zložky - Maturitnej Skúšky is a form of assessment of the practical skills and competencies of a secondary vocational school student in their specific field of study, which is part of the final Matura exam."
+      "answer": "Praktická Časť Odbornej Zložky - Maturitnej Skúšky is a form of assessment of the practical skills and competencies of a secondary vocational school student in their specific field of study, which is part of the final Maturita exam."
     },
 
     {

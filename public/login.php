@@ -1,7 +1,7 @@
 <?php
 
 // Include the language and shared content logic
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/../config.php';
 
 // Refresh session timeout on activity
 if (isset($_SESSION['timeout']) && (time() - $_SESSION['timeout'] > $config['session']['timeout'])) {

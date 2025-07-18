@@ -1,7 +1,7 @@
 <?php
 
 // Include the database configuration (assuming it defines DB_HOST, DB_USER, etc.)
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/../config.php';
 
 // Check for existing user session (e.g., if already logged in, redirect)
 if (isset($_SESSION['valid']) && $_SESSION['valid'] === true) {

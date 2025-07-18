@@ -1,6 +1,6 @@
 <?php
 // Include the language and shared content logic
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/../config.php';
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +47,14 @@ require_once __DIR__ . '/config.php';
         <?php endif; ?>
     </div>
 </div>
-  <script src="/global/js/locales.js"></script>
+
+<div class="index">
+    <form action="upload.php" method="post" enctype="multipart/form-data" class="upload_form">
+        <label for="fileToUpload">Select file to upload:</label>
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload File" name="submit">
+    </form>
+</div>
+    <script src="/global/js/locales.js"></script>
 </body>
 </html>
