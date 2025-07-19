@@ -1,23 +1,17 @@
 {
     "name": "pecs1/pcoz-ms",
     "description": "Dynamic website that saves SOČ projects to a server",
-    "license": "Apache-2.0",
-    "autoload": {
-        "psr-4": {
-            "Pecs1\\PcozMs\\": "src/"
-        }
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "erusev/parsedown": "^1.7"
     },
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Pecs1",
             "email": "173087731+Pecs1@users.noreply.github.com"
         }
     ],
-    "require": {
-        "erusev/parsedown-extra": "^0.8.1",
-        "php": ">=8.2"
-    },
-    "config": {
-        "optimize-autoloader": true
-    }
+    "minimum-stability": "stable"
 }

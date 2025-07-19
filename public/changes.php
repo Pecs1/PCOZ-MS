@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $changelogFilePath = __DIR__ . '/../CHANGELOG.md';
 
@@ -9,7 +9,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-$parserer = new ParsedownExtra();
+$parserer = new Parsedown();
 
 $markdownContent = '';
 if (file_exists($changelogFilePath)) {

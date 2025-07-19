@@ -1,7 +1,6 @@
 # Contributing Guide
 
 Looking to report an issue/bug or make a feature request? Please refer to the [README file](README.md).
-Looking to report an issue/bug or make a feature request? Please refer to the [README file](README.md).
 
 ---
 
@@ -65,7 +64,7 @@ Before you start, please note that the ability and knowledge to use these progra
 
 ## Getting help
 
-If you have questions about the code, please ask in [discussions](https://github.com/Pecs1/PCOZ-MS/discussions) on GitHub. We will do our best to help you.
+If you have questions, please ask in [discussions](https://github.com/Pecs1/PCOZ-MS/discussions) on GitHub. We will do our best to help you.
 
 ## Forks
 

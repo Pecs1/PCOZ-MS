@@ -1,3 +1,8 @@
-/public/vendor/
-.github/workflows/
+/vendor/
 /uploads/*
+
+# currently in development or unused
+.github/workflows/
+public/global/js/scripts.js
+public/*.php
+public/global/css/*.css
