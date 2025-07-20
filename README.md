@@ -13,11 +13,11 @@ Upload your Secondary School Professional Activities to the server for easy and 
 
 <div align="left">
 
-* Safe saving your projects on a server
-* Easily accessible projects for signed in users
-* You can use other saved projects as an inspiration
-* Categories for easy and faster search for projects
-* Light and dark themes.
+* **(In development)** Safe saving your projects on a server
+* **(In development?)** Easily accessible projects for signed in users
+* **(In development?)** You can use other saved projects as an inspiration
+* **(Planned)** Categories for easy and faster search for projects
+* **(Planned)** Light and dark themes.
 
 </div>
 
@@ -34,7 +34,7 @@ Before reporting a new issue, take a look at the [issues](https://github.com/Pec
 Thank you to all the people who have contributed!
 
 <a href="https://github.com/Pecs1/PCOZ-MS/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=Pecs1/PCOZ-MS" alt="PČOZ-MS contributors" title="PČOZ-MS contributors" width="800"/>
+    <img src="https://contrib.rocks/image?repo=Pecs1/PCOZ-MS" alt="PČOZ-MS contributors" title="PČOZ-MS contributors" width="100"/>
 </a>
 
 ### License

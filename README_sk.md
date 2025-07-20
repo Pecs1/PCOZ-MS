@@ -13,11 +13,11 @@ Nahrajte vaše Stredoškolské odborné činnosti na server pre jednoduché a sy
 
 <div align="left">
 
-* Bezpečné ukladanie vašich projektov na server
-* Ľahko prístupné projekty pre prihlásených používateľov
-* Môžete použiť iné uložené projekty ako inšpiráciu
-* Kategórie pre jednoduché a rýchlejšie vyhľadávanie projektov
-* Svetlá a tmavá téma.
+* **(Vo vývoji)** Bezpečné ukladanie vašich projektov na server
+* **(Vo vývoji?)** Ľahko prístupné projekty pre prihlásených používateľov
+* **(Vo vývoji?)** Môžete použiť iné uložené projekty ako inšpiráciu
+* **(Plánované)** Kategórie pre jednoduché a rýchlejšie vyhľadávanie projektov
+* **(Plánované)** Svetlá a tmavá téma.
 
 </div>
 
@@ -34,7 +34,7 @@ Predtým ako nahlásite novú chybu, pozrite sa pre ďalšie otvorené [chyby](h
 Ďakujeme všetkým, ktorí sa podieľali na tomto projekte!
 
 <a href="https://github.com/Pecs1/PCOZ-MS/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=Pecs1/PCOZ-MS" alt="PČOZ-MS contributors" title="PČOZ-MS contributors" width="800"/>
+    <img src="https://contrib.rocks/image?repo=Pecs1/PCOZ-MS" alt="PČOZ-MS contributors" title="PČOZ-MS contributors" width="100"/>
 </a>
 
 ### Licencia
