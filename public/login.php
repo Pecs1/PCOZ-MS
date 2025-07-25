@@ -68,52 +68,53 @@ if (isset($_SESSION['error_message'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     try {
-        $pdo = new PDO("mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET, DB_USER, DB_PASS);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Sanitize input
-        $personal_id = filter_var($_POST['username'], FILTER_SANITIZE_NUMBER_INT);
-        $password = $_POST['password'];
 
-        // Validate CSRF token
-        if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'] ?? '')) {
-            // Use translation key 'invalid-csrf-token' from loaded JSON
-            $msg = htmlspecialchars($php_translations['errors']['invalid-csrf-token'] ?? 'Invalid CSRF token.');
-        } else {
-            // Fetch user data
-            $stmt = $pdo->prepare("SELECT name, surname, password, failed_attempts, last_attempt_time FROM users WHERE personal_id = :personal_id");
-            $stmt->execute(['personal_id' => $personal_id]);
-            $user = $stmt->fetch();
+    // Sanitize input
+    $personal_id = filter_var($_POST['username'], FILTER_SANITIZE_NUMBER_INT);
+    $password = $_POST['password'];
 
-            if ($user) {
-                $lockout_time = 300; // 5 minutes
-                $time_since_last_attempt = time() - strtotime($user['last_attempt_time']);
+    // Validate CSRF token
+    if (!hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'] ?? '')) {
+        // Use translation key 'invalid-csrf-token' from loaded JSON
+        $msg = htmlspecialchars($php_translations['errors']['invalid-csrf-token'] ?? 'Invalid CSRF token.');
 
-                if ($user['failed_attempts'] >= 5 && $time_since_last_attempt < $lockout_time) {
-                    // Use translation key 'too-many-attempts' from loaded JSON
-                    $msg = htmlspecialchars($php_translations['errors']['too-many-attempts'] ?? 'Too many failed attempts. Please try again later.');
+    } else {
+        // Fetch user data
+        $stmt = $pdo->prepare("SELECT name, surname, password, failed_attempts, last_attempt_time FROM users WHERE personal_id = :personal_id");
+        $stmt->execute(['personal_id' => $personal_id]);
+        $user = $stmt->fetch();
+
+        if ($user) {
+            $lockout_time = 300; // 5 minutes
+            $time_since_last_attempt = time() - strtotime($user['last_attempt_time']);
+
+            if ($user['failed_attempts'] >= 5 && $time_since_last_attempt < $lockout_time) {
+                // Use translation key 'too-many-attempts' from loaded JSON
+                $msg = htmlspecialchars($php_translations['errors']['too-many-attempts'] ?? 'Too many failed attempts. Please try again later.');
+
+            } else {
+                // Verify password
+                if (password_verify($password, $user['password'])) {
+                    session_regenerate_id(true);
+                    $_SESSION['valid'] = true;
+                    $_SESSION['timeout'] = time();
+                    $_SESSION['personal_id'] = $personal_id;
+                    $_SESSION['name'] = $user['name'];
+                    $_SESSION['surname'] = $user['surname'];
+
+                    // Reset failed attempts on successful login
+                    $stmt = $pdo->prepare("UPDATE users SET failed_attempts = 0 WHERE personal_id = :personal_id");
+                    $stmt->execute(['personal_id' => $personal_id]);
+
+                    header("Location: index.php");
+                    exit;
                 } else {
-                    // Verify password
-                    if (password_verify($password, $user['password'])) {
-                        session_regenerate_id(true);
-                        $_SESSION['valid'] = true;
-                        $_SESSION['timeout'] = time();
-                        $_SESSION['personal_id'] = $personal_id;
-                        $_SESSION['name'] = $user['name'];
-                        $_SESSION['surname'] = $user['surname'];
-
-                        // Reset failed attempts on successful login
-                        $stmt = $pdo->prepare("UPDATE users SET failed_attempts = 0 WHERE personal_id = :personal_id");
-                        $stmt->execute(['personal_id' => $personal_id]);
-
-                        header("Location: index.php");
-                        exit;
-                    } else {
-                        // Increment failed attempts
-                        $stmt = $pdo->prepare("UPDATE users SET failed_attempts = failed_attempts + 1, last_attempt_time = NOW() WHERE personal_id = :personal_id");
-                        $stmt->execute(['personal_id' => $personal_id]);
-                        // Use translation key 'invalid-id-password' from loaded JSON
-                        $msg = htmlspecialchars($php_translations['errors']['invalid-id-password'] ?? 'Invalid Personal ID or Password.');
+                    // Increment failed attempts
+                    $stmt = $pdo->prepare("UPDATE users SET failed_attempts = failed_attempts + 1, last_attempt_time = NOW() WHERE personal_id = :personal_id");
+                    $stmt->execute(['personal_id' => $personal_id]);
+                    // Use translation key 'invalid-id-password' from loaded JSON
+                    $msg = htmlspecialchars($php_translations['errors']['invalid-id-password'] ?? 'Invalid Personal ID or Password.');
                     }
                 }
             } else {
